@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<script>
+    function check() {
+        window.location = "{% url 'index' %}";
+    }
+</script>
+<html lang="en">
+<style>
+    body {
+        background-color: #dae6f0ea;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 22;
+    }
+    
+    .center {
+        padding: 50px 0;
+        text-align: center;
+    }
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Destination</title>
+</head>
+
+<body>
+    <button type="button" onclick="check()">Home</button> {% for q in destinations %}
+
+    <center>
+        <h1>{{q.name}}</h1>
+    </center>
+    <pre>
+    <div class="center">
+    {% if q.name == 'Manali' %}
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26997.548162092862!2d77.1696101840669!3d32.239417742791396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39048708163fd03f%3A0x8129a80ebe5076cd!2sManali%2C%20Himachal%20Pradesh!5e0!3m2!1sen!2sin!4v1573034328374!5m2!1sen!2sin"
+    width="1400" height="450" frameborder="0" style="border:1;" allowfullscreen="true"></iframe>
+    {% elif q.name == 'Ladakh' %}
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3381266.548290588!2d75.60269550519328!3d34.14587870074164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38fde3fd16bbc7db%3A0xce085a7bd537aa24!2sLadakh!5e0!3m2!1sen!2sin!4v1573383497263!5m2!1sen!2sin" 
+    width="1400" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+    {% elif q.name == 'Pangong Lake' %}
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d212135.99822277334!2d78.58350328403263!3d33.82198991006151!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39002d69b6082a97%3A0xb7ba17e3c8c016a9!2sPangong%20Tso!5e0!3m2!1sen!2sin!4v1573383536331!5m2!1sen!2sin"
+    width="1400" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+    {% elif q.name == 'Andaman and Nicobar' %}
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4020905.308371113!2d91.00563882921877!3d10.207808600144771!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3064a00f2b650ff3%3A0xce80055648fccb2c!2sAndaman%20and%20Nicobar%20Islands!5e0!3m2!1sen!2sin!4v1573383571742!5m2!1sen!2sin" 
+    width="1400" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+    {% elif q.name == 'Rishikesh' %}
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d55235.63782569695!2d78.23558919249191!3d30.087674107691246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39093e67cf93f111%3A0xcc78804a6f941bfe!2sRishikesh%2C%20Uttarakhand!5e0!3m2!1sen!2sin!4v1573383678739!5m2!1sen!2sin"
+    width="1400" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+    {% elif q.name == 'Mount Abu' %}
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29023.051433146775!2d72.70325697231335!3d24.593287937543426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395d2a7b9c58c24f%3A0x41ec48d89a772ec9!2sMount%20Abu%2C%20Rajasthan%20307501!5e0!3m2!1sen!2sin!4v1573383713358!5m2!1sen!2sin"
+    width="1400" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+    {% elif q.name == 'Goa' %}
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d984973.5459469887!2d73.45181605878582!3d15.34651324600896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbfba106336b741%3A0xeaf887ff62f34092!2sGoa!5e0!3m2!1sen!2sin!4v1573383918179!5m2!1sen!2sin" 
+    width="1400" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+    {% elif q.name == 'Gokarna' %}
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30896.663728289222!2d74.30663086143534!3d14.537246799930067!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbe83d65b0a4c71%3A0xe9e09fd076bb41c0!2sGokarn%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1573383750994!5m2!1sen!2sin" 
+    width="1400" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+    {% elif q.name == 'Kasol' %}
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3383.1939688050466!2d77.31211601500891!3d32.00985908121037!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39045c4474aa31e9%3A0xf112d2e32b47949d!2sKasol%2C%20Himachal%20Pradesh%20175105!5e0!3m2!1sen!2sin!4v1574059762577!5m2!1sen!2sin" 
+    width="1400" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+    {% elif q.name == 'Hampi' %}
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7695.59670678549!2d76.45895732380725!3d15.333189807356824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb77fd95d4be823%3A0x6e52e05076df36b8!2sHampi%2C%20Karnataka%20583239!5e0!3m2!1sen!2sin!4v1574059994185!5m2!1sen!2sin" 
+    width="1400" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+    {% elif q.name == 'Pondicherry' %}
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62456.81847266373!2d79.77850840796782!3d11.936293134398941!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5361ab8e49cfcf%3A0xcc6bd326d2f0b04e!2sPuducherry!5e0!3m2!1sen!2sin!4v1574060027550!5m2!1sen!2sin" 
+    width="1400" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+    {% elif q.name == 'Kuari Pass Trek' %}
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27517.332199578508!2d79.55249039106262!3d30.44555398122479!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39a7778e4b2a84fb%3A0xd16191a5e9247241!2sKuari%20Pass%20Trek!5e0!3m2!1sen!2sin!4v1574060089664!5m2!1sen!2sin" 
+    width="1400" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+    {% endif %}
+    <p><pre>{{ q.desc1}}</pre></p>
+    <img src="{{q.image1.url}}" alt="" width="360px" height="300px">
+    <p><pre>{{ q.desc2}}</pre></p>
+    <img src="{{q.image2.url}}" alt="" width="360px" height="300px">
+    <p><pre>{{ q.desc3}}</pre></p>
+    <img src="{{q.image3.url}}" alt="" width="360px" height="300px">
+    <p><pre>{{ q.desc4}}</pre></p>
+    <img src="{{q.image4.url}}" alt="" width="360px" height="300px">
+    <p><pre>{{ q.desc5}}</pre></p>
+    </div>
+    </pre>
+
+    {% endfor %}
+
+</body>
+
+</html>
